@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+input {
+  height: 70px;
+  width: 600px;
+  justify-content: center;
+  flex-direction:column;
+  display: block;
+  margin: auto;
+  font-size: 50px;
+  border-color: rgba(0, 255, 149, 0.534);
+  border-radius: 1rem;
+  text-align: center;
+  color: tomato;
+  background-color: rgba(138, 230, 150, 0.356);
+}
