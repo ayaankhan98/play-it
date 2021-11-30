@@ -1,7 +1,7 @@
 {
   "name": "play-it",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://ayaankhan98.github.io/play-it",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -14,7 +14,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
