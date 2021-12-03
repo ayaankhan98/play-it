@@ -1,44 +1,38 @@
 .block {
   aspect-ratio : 1;
-  border-style : solid;
-  border-width : 1px;
   margin : 0%;
   display : inline-block;
 }
 
 .xl {
-  width : 120px;
+  width : 10%;
 }
 
 .l {
-  width : 60px;
+  width : 5%;
 }
 
 .m {
-  width : 40px;
+  width : 3.32%;
 }
 
 .s {
-  width : 30px;
+  width : 2.5%;
 }
 
 .wall {
   background-color : red;
-  border-color : red;
 }
 
 .snake {
   background-color : black;
-  border-color : black;
 }
 
 .empty {
   background-color : white;
-  border-color : grey;
 }
 
 .food {
   background-color : green;
-  border-color : green;
 }
 

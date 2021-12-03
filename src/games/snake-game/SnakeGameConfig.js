@@ -1,14 +1,14 @@
 const snakeStartingPoint = {
-  x : 5,
-  y : 5
+  x : 1,
+  y : 1
 };
 
 const constants = {
-  gridSize : "L",
+  gridSize : "XL",
   startingPoint : snakeStartingPoint,
-  mapType : "BorderMap",
+  mapType : "EmptyMap",
   snakeInitialDirection : "right",
-  frequency: 100,
+  frequency: 10,
 };
 
 export default constants;

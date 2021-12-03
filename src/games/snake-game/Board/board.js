@@ -87,7 +87,6 @@ function getOppositeDirection(direction) {
   if(direction === "right") return "left";
 }
 
-
 function Board(props) {
   const maxHeight = props.gridCondition.length;
   const maxWidth = props.gridCondition[0].length;
@@ -97,16 +96,18 @@ function Board(props) {
 
   let gridCondition = [...props.gridCondition];
   let snake = props.snake;
+  let queue = props.queue;
 
   const handleKeyDown = (event) => {
-
-    const direction = snake.snakeHead.direction;
-    if(getOppositeDirection(direction) === mapKeyToDirection(event.key)) return;
-    
-    snake.setDirection(mapKeyToDirection(event.key));
+    queue.push(mapKeyToDirection(event.key));
   }
 
   const effectFunction = () => {
+    const direction = queue.pop();
+    if(direction) {
+      const snakeDirection = snake.snakeHead.direction;
+      if(snakeDirection !== getOppositeDirection(direction)) snake.setDirection(direction); 
+    };
     let newGridCondition = gameLoop(gridCondition, snake, size);
     if(newGridCondition) props.updateGrid([...newGridCondition]);
     else props.updateGrid(newGridCondition);

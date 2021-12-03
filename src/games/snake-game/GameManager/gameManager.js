@@ -45,7 +45,7 @@ function GameManager(props) {
   }
 
   if(gridCondition) return (<div className={styles.gameBoard}>
-    <Board updateGrid={updateGrid} updateTick={updateTick} snake={props.snake} size={size} gridCondition={[...gridCondition]} timer={timer} tick={tick}/></div>)
+    <Board updateGrid={updateGrid} updateTick={updateTick} snake={props.snake} size={size} gridCondition={[...gridCondition]} timer={timer} tick={tick} queue={props.queue}/></div>)
   else return (<div>
     <h1>Better Luck Next Time !</h1>
     <h2>Your Score :- {props.snake.playerScore}</h2>

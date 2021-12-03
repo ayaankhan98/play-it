@@ -64,17 +64,19 @@ export default class Snake {
     return this.#directionChanger[i][j];
   }
 
+
+
   setDirection(direction) {
     let x = this.#headX;
     let y = this.#headY;
 
     this.#headDirection = direction;
     this.#directionChanger[y][x] = direction;
-	this.#snakeDetails[0][0] = y;
-	this.#snakeDetails[0][1] = x;
-	this.#snakeDetails[0][2] = direction;
-	  this.updateHead();
-	this.updateTail();
+    this.#snakeDetails[0][0] = y;
+    this.#snakeDetails[0][1] = x;
+    this.#snakeDetails[0][2] = direction;
+    this.updateHead();
+    this.updateTail();
   }
 
   updateHead() {
