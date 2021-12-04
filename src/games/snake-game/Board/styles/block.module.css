@@ -1,0 +1,38 @@
+.block {
+  aspect-ratio : 1;
+  margin : 0%;
+  display : inline-block;
+}
+
+.xl {
+  width : 10%;
+}
+
+.l {
+  width : 5%;
+}
+
+.m {
+  width : 3.32%;
+}
+
+.s {
+  width : 2.5%;
+}
+
+.wall {
+  background-color : red;
+}
+
+.snake {
+  background-color : black;
+}
+
+.empty {
+  background-color : white;
+}
+
+.food {
+  background-color : green;
+}
+
