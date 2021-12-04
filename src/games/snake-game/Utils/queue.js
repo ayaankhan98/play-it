@@ -11,6 +11,7 @@ class Queue {
   get Tail() {
     if(this.#body.length)
       return this.#body[this.#body.length - 1];
+    return null;
   }
   
   get empty() {
