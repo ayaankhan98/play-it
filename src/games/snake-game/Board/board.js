@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import Block from "./block";
 import styles from "./styles/board.module.css";
 import getFood from "../Food/food"
@@ -93,6 +93,7 @@ function Board(props) {
   const size = props.size;
   const tick = props.tick;
   const timer = props.timer;
+  const gameInput = useRef(0);
 
   let gridCondition = [...props.gridCondition];
   let snake = props.snake;
@@ -116,6 +117,7 @@ function Board(props) {
   }
   
   useEffect(() => {
+    gameInput.current.focus();
     if(timer !== tick) effectFunction()
   });
 
@@ -131,7 +133,7 @@ function Board(props) {
                 />);
   }
 
-  return <div className={styles.board} tabIndex="0" onKeyDown={handleKeyDown} >{test}</div>
+  return <div className={styles.board} tabIndex="0" onKeyDown={handleKeyDown} ref={gameInput}>{test}</div>
 } 
 
 export default Board;
